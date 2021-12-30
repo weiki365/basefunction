@@ -1,0 +1,17 @@
+{
+    "name": "weiki/basefunction",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "weiki",
+            "email": "happy_gzg@126.com"
+        }
+    ],
+    "autoload": {
+        "files": ["src/base.php"]
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

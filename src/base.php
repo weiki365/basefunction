@@ -82,7 +82,7 @@ if (!function_exists('toConst')) {
      */
     function toConst(string $str): string
     {
-        $dstr = preg_replace_callback('/([A-Z]+)/', function ($matchs) {
+        $dstr = preg_replace_callback('/([A-Z]{1})/', function ($matchs) {
             return '_' . strtolower($matchs[0]);
         }, $str);
         $name = trim(preg_replace('/_{2,}/', '_', $dstr), '_');

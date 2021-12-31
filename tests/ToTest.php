@@ -30,6 +30,7 @@ class ToTest extends TestCase
         $this->assertEquals('GET_OK', toConst('getOk'));
         $this->assertEquals('GET_OK', toConst('GetOk'));
         $this->assertEquals('GET_OK', toConst('get_ok'));
+        $this->assertEquals('GET_O_K', toConst('getOK'));
     }
 
     public function testToDate()

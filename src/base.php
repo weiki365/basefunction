@@ -105,6 +105,21 @@ if (!function_exists('toDate')) {
     }
 }
 
+if (!function_exists('toJson')) {
+    /**
+     * 将一个变量转换成JSON格式
+     *
+     * YYYY-HH-DD HH:ii:ss
+     *
+     * @param  int|null|string|array|object $data
+     * @return string
+     */
+    function toJson($data): string
+    {
+        return json_encode($data, JSON_UNESCAPED_UNICODE);
+    }
+}
+
 if (!function_exists('xmlToArray')) {
     /**
      * 将一个XML字符串转换成Array

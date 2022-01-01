@@ -41,6 +41,16 @@ class ToTest extends TestCase
         $this->assertEquals('2020-01-01 00:00:00', toDate(1577808000));
     }
 
+    public function testToJson()
+    {
+        $this->assertEquals('null', toJson(null));
+        $this->assertEquals('0', toJson(0));
+        $this->assertEquals('"hello, world"', toJson('hello, world'));
+        $this->assertEquals('["hello, world"]', toJson(['hello, world']));
+        $this->assertEquals('{"hello":"world"}', toJson(['hello' => 'world']));
+        $this->assertEquals('{"China":"中国"}', toJson((object) ['China' => '中国']));
+    }
+
     public function testXmlToArray()
     {
         $this->assertEquals(['name' => 'weiki', 'email' => 'happy_gzg@126.com'], xmlToArray('<?xml version="1.0" encoding="ISO-8859-1"?> <!--  Copyright w3school.com.cn --> <note> <name>weiki</name> <email>happy_gzg@126.com</email> </note>'));
